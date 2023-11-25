@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Crop_prediction-result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='crop.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Nunito&family=Alkatra&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- SWIPER.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+ <!-------------------- PRELOADER -------------------->
+ <div class="preloader">
+    <span class="loader"></span>
+</div>
+
+<!-------------------- SCROLL TO TOP BUTTON -------------------->
+<div id="scrollTop" onclick="scrollToTop()">
+    <i class="ri-arrow-up-line"></i>
+</div>
+
+<!-------------------- Header -------------------->
+<div class="home" id="home">
+    <nav>
+        <div class="nav-logo">
+            <i class="ri-quill-pen-fill"></i>
+            <h2 id="company" onclick="scrollToTop()">CropCare</h2>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li>
+                  <a href="{{ url_for('index') }}" class="pages">Home</a>
+                </li>
+                <li>
+                  <a href="{{ url_for('fert_recommend') }}" class="pages">Fertilizer</a>
+              </li>
+                <li>
+                  <a href="{{ url_for('disease_prediction') }}" class="pages">Crop Disease</a>
+              </li>
+            </ul>
+            <div class="nav-close" id="nav-close" onclick="hideNav()">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+        <!-- TOGGLE DARK/LIGHT MODE Later -->
+        <i class="ri-moon-line" id="moon" onclick="changeToDark()"></i>
+        <i class="ri-sun-line" id="sun" onclick="changeToLight()"></i>
+
+        <div class="nav-toggle" id="nav-toggle" onclick="showNav()">
+            <i class="ri-apps-line" id="toggle"></i>
+        </div>
+    </nav>
+<div class="wrapper">
+  <div class="title">
+    Find out the most suitable crop to grow in your farm
+  </div>
+  <form method="POST" action="{{ url_for('predict') }}">
+  <div class="form">
+     <div class="inputfield">
+        <label>Nitrogen</label>
+        <input type="number" class="input" name="nitrogen" placeholder="Enter the value (example:50)" required>
+     </div>  
+      <div class="inputfield">
+        <label>Phosphorous</label>
+        <input type="number" class="input" name="phosphorous" placeholder="Enter the value (example:50)" required>
+     </div>  
+     <div class="inputfield">
+        <label>Pottasium</label>
+        <input type="number" class="input" name="pottasium" placeholder="Enter the value (example:50)" required>
+     </div>  
+    <div class="inputfield">
+        <label>ph</label>
+        <input type="number" class="input" name="ph" placeholder="Enter ph value" step="0.01" required>
+     </div>
+     <div class="inputfield">
+      <label>Temperature</label>
+      <input type="number" class="input" name="temperature" placeholder="in °C" step="0.01" required>
+   </div> 
+   <div class="inputfield">
+    <label>Humidity</label>
+    <input type="number" class="input" name="humidity" placeholder="in %" step="0.01" required>
+ </div> 
+     <div class="inputfield">
+      <label>Rainfall</label>
+      <input type="number" class="input" name="rainfall" placeholder="in mm" step="0.01" required>
+   </div>
+      <div class="inputfield">
+        <label>State</label>
+        <div class="custom_select">
+          <select  onchange="print_city('state', this.selectedIndex);"
+          id="sts"
+          name="stt"
+          class="form-control">
+            <option value="">Select State</option>
+          </select>
+        </div>
+     </div>  
+    <div class="inputfield">
+        <label>City</label>
+        <div class="custom_select">
+          <select id="state"
+          class="form-control"
+          name="city"> 
+            <option value="">Select City</option>
+          </select>
+        </div>
+     </div> 
+     <script src="{{ url_for('static', filename='cities.js') }}">print_state("sts");</script>
+    <script language="javascript">print_state("sts");</script>
+    <div class="inputfield">
+      <input type="submit" value="Predict" class="btn">
+    </div>
+  </div>
+</div>	 
+</form>           
+</div>
+
+
+      <!-------------------- SCRIPT JS ------------------->
+      <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
