@@ -48,7 +48,7 @@ pytz==2023.3.post1
 pyzmq==25.1.1
 requests==2.31.0
 scikit-learn==0.24.2
-scipy==1.11.3
+scipy==1.7.3
 seaborn==0.13.0
 six==1.16.0
 stack-data==0.6.3
