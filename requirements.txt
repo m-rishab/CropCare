@@ -54,7 +54,7 @@ six==1.16.0
 stack-data==0.6.3
 sympy==1.10.1
 threadpoolctl==3.1.0
-torch==2.1.1
+torch==1.13.1
 torch-utils==0.1.2
 torchaudio==2.1.1
 torchsummary==1.5.1
