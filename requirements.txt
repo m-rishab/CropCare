@@ -59,7 +59,7 @@ torch-utils==0.1.2
 torchaudio==0.13.1
 torchsummary==1.5.1
 torchvision==0.14.1
-tornado==6.3.3
+tornado==6.2
 traitlets==5.13.0
 typing_extensions==4.8.0
 tzdata==2023.3
