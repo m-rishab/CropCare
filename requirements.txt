@@ -16,7 +16,7 @@ fonttools==4.36.0
 fsspec==2023.1.0
 gunicorn==21.2.0
 idna==3.4
-ipykernel==6.26.0
+ipykernel==6.0.0
 ipython==8.17.2
 itsdangerous==2.1.2
 jedi==0.19.1
