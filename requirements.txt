@@ -36,7 +36,7 @@ numpy==1.14.5
 packaging==23.2
 pandas==1.0.5
 parso==0.8.3
-Pillow==10.1.0
+Pillow==7.0.0
 platformdirs==4.0.0
 prompt-toolkit==3.0.41
 psutil==5.9.6
