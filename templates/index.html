@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CropCare - Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Nunito&family=Alkatra&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <!-- SWIPER.JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+        <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <!-- Remix Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- Jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <!-------------------- PRELOADER -------------------->
+        <div class="preloader">
+            <span class="loader"></span>
+        </div>
+        
+        <!-------------------- SCROLL TO TOP BUTTON -------------------->
+        <div id="scrollTop" onclick="scrollToTop()">
+            <i class="ri-arrow-up-line"></i>
+        </div>
+
+        <!-------------------- Header -------------------->
+        <div class="home" id="home">
+            <nav>
+                <div class="nav-logo">
+                    <i class="ri-quill-pen-fill"></i>
+                    <h2 id="company" onclick="scrollToTop()">CropCare</h2>
+                </div>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#home" class="pages">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="pages">About</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('crop') }}" class="pages">Crop</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('fert_recommend') }}" class="pages">Fertilizer</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('disease_prediction') }}" class="pages">Crop Disease</a>
+                        </li>
+                        <li>
+                            <a href="#featured" class="pages">Features</a>
+                        </li>
+                        <li>
+                            <a href="#help" class="pages">Help</a>
+                        </li>
+                    </ul>
+                    <div class="nav-close" id="nav-close" onclick="hideNav()">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+                <!-- TOGGLE DARK/LIGHT MODE Later -->
+                <i class="ri-moon-line" id="moon" onclick="changeToDark()"></i>
+                <i class="ri-sun-line" id="sun" onclick="changeToLight()"></i>
+
+                <div class="nav-toggle" id="nav-toggle" onclick="showNav()">
+                    <i class="ri-apps-line" id="toggle"></i>
+                </div>
+            </nav>
+            <!-- LANDING PAGE -->
+            <div class="header" id="header">
+                <div class="content" data-inViewport="slideTop">
+                    <h2 id="title"><span><a href="../templates/crop.html"></a><btn>Crop</btn></span> Care</h2>
+                    <p>
+                        "Welcome to CropCare, your go-to solution for intelligent and simplified agriculture. We bring together cutting-edge technologies to seamlessly integrate<b> crop recommendations, fertilizer guidance, and plant disease diagnosis into a single, user-friendly platform.</b> Our mission is to empower farmers with precise, data-driven insights that optimize crop health and yields. <br><b>With personalized crop recommendations based on</b> soil analysis, smart fertilizer guidance for optimal nutrient application, and advanced plant health diagnosis through image recognition, CropCare is at the forefront of precision farming. Cultivate success effortlessly with CropCare — where simplicity meets intelligence for a thriving agricultural future."
+                    </p>
+                    <button onclick="scrollToAbout()">Learn more!<i class="ri-arrow-right-line"></i></button>
+                </div>
+                <img src="{{ url_for('static', filename='images/crop.png') }}" data-inViewport="slideLeft" >
+            </div>
+        </div>
+        <!--------------------  ABOUT -------------------->
+        <div class="about" id="about">
+            <h2>About</h2>
+            <div class="content first">
+                <img src="{{ url_for('static', filename='images/veges.jpg') }}" data-inViewport="slideLeftDown" >
+                <p data-inViewport="slideLeft"><span>Overview</span><br>It is designed to help farmers make informed decisions about which  <br>crops to grow based on various factors such as soil composition,<br>Ph level, rainfall, geographical location, and environmental conditions <br>such as humidity, temprature and precipitations.<br> These systems use machine learning algorithms to analyze the data and <br> provide recommendations for the best crop to grow in a particular area.
+                </p>
+            </div>
+            <div class="content">
+                <p data-inViewport="slideLeft"><span>Why Choose Us?</span><br>By recommending crops that are well-suited to local soil and weather conditions, <br>as well as the available resources (such as water and fertilizer),<br>these systems help optimize resource allocation, reducing waste <br> and improving resource efficiency.<br>As technology advances, crop recommendation systems are becoming more accessible to farmers <br>  through web platforms. This enables even <br>small-scale and remote farmers to benefit from data-driven insights. </p>
+                <img src="{{ url_for('static', filename='images/crop 2.png') }}" id="special" data-inViewport="slideLeft">
+            </div>
+        </div>
+        <!-------------------- Featured Products ------------------>
+        <div class="featured" id="featured">
+            <h2>Features</h2>
+            <p>Here are some features products we provide. Check them out!</p>
+            <!-- Swiper -->
+            <div class="swiper" data-inViewport="slideTop">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h2>CROP<br><sub>Recommend about the type of crop to be cultivated which is best suited for the respective condition.</sub></h2>
+                        <img src="{{ url_for('static', filename='images/Box1.png') }}">
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>FERTILIZER<br><sub>Recommendation about the type of fertlizer best suited for the particular soil and the reccomendation crop.</sub></h2>
+                        <img src="{{ url_for('static', filename='images/Box 2.jpg') }}">
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>CROP DISEASE<br><sub>Predicting the name and causes of the crop disease and suggestions to cure it.</sub></h2>
+                        <img src="{{ url_for('static', filename='images/Disease.png') }}">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+                            
+        <!-------------------- Tour ------------------>
+        <div class="help" id="help">
+            <h2>Help</h2>
+            <p>FOR ANY QUERIES RELATED TO THIS PROJECT and TOPICS RELATED TO DATA SCIENCE</p>
+            <div class="signup">
+                <img src="{{ url_for('static', filename='images/subscribe.svg') }}">
+                <form>
+                    <button type="Mail me" class="signUpBtn"><a href="mailto:rish.mishra130801@gmail.com">Mail me</a></button>
+                </form>
+            </div>
+        </div>
+      
+        <!-------------------- FOOTER ------------------->
+        <div class="footer">
+            <div class="links">
+                <ul>
+                    <h2>Follow me</h2>
+                    <li><a href="https://linkedin.com/in/rishabhh-mishra"><i class="ri-linkedin-box-fill"></i>Linked In</a></li>
+                    <li><a href="https://github.com/m-rishab"><i class="ri-github-fill"></i>Github</a></li>
+                </ul>
+            </div>
+            <p>© Copyright 2023<br>
+                <br>
+                Made ❤️ By Rishabh
+            </p>
+        </div>
+        <!-------------------- SCRIPT JS ------------------->
+        <script src="{{ url_for('static', filename='main.js') }}"></script>
+    </body>
+</html>
