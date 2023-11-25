@@ -56,7 +56,7 @@ sympy==1.10.1
 threadpoolctl==3.1.0
 torch==1.13.1
 torch-utils==0.1.2
-torchaudio==2.1.1
+torchaudio==0.13.1
 torchsummary==1.5.1
 torchvision==0.16.1
 tornado==6.3.3
