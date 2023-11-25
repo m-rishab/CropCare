@@ -1,0 +1,457 @@
+/* ----------------- ROOT VALUES ------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all 0.5s;
+}
+:root {
+    /* FONT SIZES */
+    --largest-font: 112px;
+    --larger-font: 70px;
+    --large-font: 34px;
+    --text-large-font: 20px;
+    --text-font: 16px;
+    /* COLOURS */
+    --text-color: #000;
+    --hover-color: #bb3333;
+    --dark-color: #095000;
+    --bg-color: #b3ffa2;
+    --bg-color-header: #56a944d3;
+    --header-change-color: #b8eba6d7;
+
+}
+.change-header {
+    background: var(--bg-color);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px var(--bg-color-header), 0 8px 20px var(--bg-color-header);
+}
+/* ----------------- PRELOADER ----------------- */
+.preloader {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 1000000000000000000000;
+    position: fixed;
+}
+.loader {
+    position: relative;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background: transparent;
+    border-top: 2.2px solid var(--dark-color);
+    border-left: 2.2px solid var(--dark-color);
+    border-right: none;
+    border-bottom: none;
+    animation: spin 0.5s linear infinite;
+
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ----------------- SCROLL TO TOP BUTTON ----------------- */
+#scrollTop {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    opacity: 0;
+    cursor: pointer;
+    transform: translate(90vw, 90vh);
+    border-radius: 50%;
+    transition: all 0.5s;
+    z-index: 1000;
+}
+#scrollTop i {
+    background: var(--dark-color);
+    font-size: 1.5em;
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.5s;
+    color: var(--bg-color);
+}
+#scrollTop i:hover {
+    color: #fff;
+    background: #289a26;
+}
+
+/* ----------------- SCROLLBAR ----------------- */
+::-webkit-scrollbar {
+    background: #d7d7d7;
+    width: 11px;
+    border-radius: 10px;
+    margin: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background: #858585;
+    border-radius: 10px;
+}
+        
+/* ----------------- MAIN HEADER ----------------- */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background: var(--bg-color);
+    overflow: hidden;
+    flex-direction: column;
+}
+nav {
+    display: flex;
+    position: fixed;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding-right: 120px;
+    background-color: var(--bg-color);
+    z-index: 10;
+    transition: all 0.5s;
+}
+.nav-logo {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.nav-logo i {
+    font-size: 1.5em;
+    color: var(--dark-color);
+    margin: 1em;
+}
+#company {
+    font-size: var(--text-large-font);
+    margin: 1.2em;
+    font-family: 'Alkatra';
+    padding: 0;
+    margin: 20px;
+    top: 0;
+    cursor: pointer;
+    color: var(--dark-color);
+    position: absolute;
+    left: 40px;
+}
+.nav-menu {
+    transition: all 0.5s;
+}
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: all 0.5s;
+}
+.nav-menu ul li {
+    margin: 1.3em 1.5em;
+    font-size: var(--text-large-font);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.nav-menu ul li:hover {
+    color: var(--hover-color);
+}
+.nav-menu ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: all 0.5s;
+}
+.nav-menu ul li a:hover {
+    color: var(--hover-color);
+}
+.nav-toggle {
+    display: none;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+#sun {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    margin: 1em;
+    display: inline-flex;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#moon {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    margin: 1em;
+    display: inline-flex;
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+nav i {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 1.5em;
+}
+.nav-close {
+    display: none;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+@media screen and (max-width: 880px) {
+    nav {
+        justify-content: center;
+        padding-right: 0;
+        width: 100%;
+        height: 80px;
+        background: var(--bg-color);
+        transition: all 0.5s;
+    }
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        background: var(--bg-color);
+        box-shadow: 0 2px 10px var(--bg-color-header),
+        0 8px 20px var(--bg-color-header);
+    }
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s;
+    }
+    .nav-menu ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: row;
+    }
+    .nav-menu ul li:nth-child(1) {
+        padding-top: 220px;
+    }
+    .nav-menu ul li a {
+        margin: 4px 20px 0 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav-close {
+        display: block;
+        visibility: visible;
+        position: absolute;
+        font-size: 1.5em;
+        top: 18px;
+        right: 32px;
+        cursor: pointer;
+    }
+    .nav-toggle {
+        position: absolute;
+        top: 0;
+        margin: 1.6em;
+        right: 20px;
+        display: inline-flex;
+        visibility: visible;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    #sun, #moon {
+        margin: 1.1em;
+    }
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: #b3ffa2;
+  padding: 0 10px;
+}
+.wrapper{
+  max-width: 600px;
+  width: 110%;
+  background: #fff;
+  margin: 50px auto;
+  margin-top: 50px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+  position: sticky;
+}
+
+.wrapper .title{
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Alkatra';
+  margin-bottom: 100px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #1d1717;
+   margin-right: 10px;
+  font-size: 14px;
+  font-size: 16px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #fec107;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fec107;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #fec107;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 25px; 
+  border: 0px;
+  background:  #07fe6e;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+  font-family: 'Alkatra';
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #ffd658;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+}
