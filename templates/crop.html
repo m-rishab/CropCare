@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Crop_prediction-result</title>
+	<title>Crop_prediction</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='crop.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,17 +80,9 @@
         <input type="number" class="input" name="pottasium" placeholder="Enter the value (example:50)" required>
      </div>  
     <div class="inputfield">
-        <label>ph</label>
+        <label>ph level</label>
         <input type="number" class="input" name="ph" placeholder="Enter ph value" step="0.01" required>
-     </div>
-     <div class="inputfield">
-      <label>Temperature</label>
-      <input type="number" class="input" name="temperature" placeholder="in °C" step="0.01" required>
-   </div> 
-   <div class="inputfield">
-    <label>Humidity</label>
-    <input type="number" class="input" name="humidity" placeholder="in %" step="0.01" required>
- </div> 
+     </div>  
      <div class="inputfield">
       <label>Rainfall</label>
       <input type="number" class="input" name="rainfall" placeholder="in mm" step="0.01" required>
