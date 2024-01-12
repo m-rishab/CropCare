@@ -29,9 +29,6 @@ CropCare is an innovative agricultural project designed to address critical chal
 
 [Upload the dataset of plants for predicting plant diseases]
 
-## Data Science Pipeline
-
-[Describe the data science pipeline for the project]
 
 ## Demo
 
