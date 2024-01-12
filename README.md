@@ -12,7 +12,7 @@ CropCare is an innovative agricultural project designed to address critical chal
 
 ## Data Flow Diagram
 
-[Insert Data Flow Diagram Image Here]
+![DFD](https://github.com/m-rishab/CropCare/assets/113618652/238ec4a3-41b3-4fd7-9d12-60aef8f9b3fe)
 
 ## System Design
 
