@@ -25,9 +25,9 @@ CropCare is an innovative agricultural project designed to address critical chal
 ### Plant Disease Detection
 <img src="https://github.com/m-rishab/CropCare/assets/113618652/2b3afd27-cf60-4399-8c85-e1b72f4af5ba.png" alt="Plant Disease Image" width="300"/>
 
-## Dataset
+## Test Dataset (For Plant Disease)
 
-[Upload the dataset of plants for predicting plant diseases]
+[https://drive.google.com/drive/folders/1z_S7CJ80B3NKQ35hwfNLCNWfrXFX4cyK?usp=sharing]
 
 
 ## Demo
