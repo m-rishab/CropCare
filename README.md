@@ -29,6 +29,10 @@ CropCare is an innovative agricultural project designed to address critical chal
 
 [https://drive.google.com/drive/folders/1z_S7CJ80B3NKQ35hwfNLCNWfrXFX4cyK?usp=sharing]
 
+## OpenWeatherMap API Integration
+
+[Insert System Design Image Here]
+
 
 ## Demo
 
