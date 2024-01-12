@@ -20,10 +20,10 @@ CropCare is an innovative agricultural project designed to address critical chal
 <img src="https://github.com/m-rishab/CropCare/assets/113618652/bffd0913-9882-4a02-a5b4-b03e27bf112c.png" alt="Crop Image" width="500"/>
 
 ### Fertilizer Recommendation
-<img src="https://github.com/m-rishab/CropCare/assets/113618652/3190badd-54a3-4196-92d5-59d04fbc9dd7.png" alt="Fertilizer Image" width="500"/>
+<img src="https://github.com/m-rishab/CropCare/assets/113618652/3190badd-54a3-4196-92d5-59d04fbc9dd7.png" alt="Fertilizer Image" width="300"/>
 
 ### Plant Disease Detection
-[Insert System Design Image Here]
+<img src="https://github.com/m-rishab/CropCare/assets/113618652/2b3afd27-cf60-4399-8c85-e1b72f4af5ba.png" alt="Plant Disease Image" width="300"/>
 
 ## Dataset
 
