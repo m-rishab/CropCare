@@ -31,8 +31,7 @@ CropCare is an innovative agricultural project designed to address critical chal
 
 ## OpenWeatherMap API Integration
 
-[Insert System Design Image Here]
-
+![Weather API](https://github.com/m-rishab/CropCare/assets/113618652/237c2f21-56bd-4c26-990c-da9a7ef2a9b1)
 
 ## Demo
 
