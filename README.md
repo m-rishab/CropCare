@@ -17,7 +17,7 @@ CropCare is an innovative agricultural project designed to address critical chal
 ## System Design
 
 ### Crop Recommendation
-[Insert System Design Image Here]
+<img src="https://github.com/m-rishab/CropCare/assets/113618652/bffd0913-9882-4a02-a5b4-b03e27bf112c.png" alt="Crop Image" width="500"/>
 
 ### Fertilizer Recommendation
 [Insert System Design Image Here]
