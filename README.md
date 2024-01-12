@@ -34,6 +34,13 @@ CropCare is an innovative agricultural project designed to address critical chal
 ![Weather API](https://github.com/m-rishab/CropCare/assets/113618652/237c2f21-56bd-4c26-990c-da9a7ef2a9b1)
 
 ## Demo
+## *DEMO-1 ( Crop Recommendation)*
+
+## *DEMO-2 ( Fertilier Recommendation)*
+![c26f867d-b362-4c89-9122-7d94bc4ec7a4](https://github.com/m-rishab/CropCare/assets/113618652/8e89b30e-8ac3-4e14-a7a7-dd4458e2f752)
+
+# *DEMO-3 (Plant-Disease Detection & Classification)*
+
 
 [Upload a demo in gif form showcasing the project in action]
 
