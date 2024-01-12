@@ -42,9 +42,7 @@ CropCare is an innovative agricultural project designed to address critical chal
 ![c26f867d-b362-4c89-9122-7d94bc4ec7a4](https://github.com/m-rishab/CropCare/assets/113618652/8e89b30e-8ac3-4e14-a7a7-dd4458e2f752)
 
 # *DEMO-3 (Plant-Disease Detection & Classification)*
-
-
-[Upload a demo in gif form showcasing the project in action]
+![7c121e6c-80fe-483c-8f1d-d7e0a3ac604f](https://github.com/m-rishab/CropCare/assets/113618652/5c5a3d30-bcd7-4159-a0db-8da396b3e26e)
 
 ## How to Run
 
@@ -52,3 +50,5 @@ To run the code, use the following command:
 
 ```bash
 python app.py
+or
+flask run
