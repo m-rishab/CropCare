@@ -4,7 +4,7 @@ Markup
 pandas
 scikit-learn
 seaborn
-opencv
+opencv-python
 torch
 torchvision
 transformers
