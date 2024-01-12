@@ -35,6 +35,8 @@ CropCare is an innovative agricultural project designed to address critical chal
 
 ## Demo
 ## *DEMO-1 ( Crop Recommendation)*
+![6057ce8f-c16b-4f53-b58a-a13c4efdc427](https://github.com/m-rishab/CropCare/assets/113618652/6bd2e7db-a90d-4239-aa3f-2605cd4fffea)
+
 
 ## *DEMO-2 ( Fertilier Recommendation)*
 ![c26f867d-b362-4c89-9122-7d94bc4ec7a4](https://github.com/m-rishab/CropCare/assets/113618652/8e89b30e-8ac3-4e14-a7a7-dd4458e2f752)
